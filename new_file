@@ -1,0 +1,7 @@
+1) checkout the master branch and created the feature branch
+2) pushed the feature version to remote with new file.
+3) Merge the changes to master from the UI.
+4) From the backend - made changes to master branch and pushed to remote.
+5 - Failed with the error as "local and remote or not in sync".
+6 - So,pulled the changes from remote to the local.
+7 - updated on the master and trying to push the master to remote.
