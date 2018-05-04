@@ -1,0 +1,37 @@
+1) Create certs with the new domain name
+      openssl req -new -sha256 -nodes -out est.domain.com.csr -newkey rsa:2048 -keyout est.domain.com.key -config <(
+      cat <<-EOF
+      [req]
+      default_bits = 2048
+      prompt = no
+      default_md = sha256
+      req_extensions = req_ext
+      distinguished_name = dn
+      [ dn ]
+      C=US
+      ST=India
+      L=HYD
+      O=company name, Inc
+      OU=Owner
+      emailAddress= 
+      CN = test.domain.com
+      [ req_ext ]
+      subjectAltName = @alt_names
+      [ alt_names ]
+      DNS.1 = test.domain.com
+      DNS.2 = test.domain.com
+      DNS.3 = *.domain.com
+      EOF
+      )
+      
+      
+      2) Get it signed by the security team.
+      
+      3) Import the certs into the VIP/Load balancer.
+      
+      4) Web server configuration changes:
+          1) update/create virtual_hosts.conf in /etc/httpd/conf to allow the orgin to access control.
+          2) Create a new rewrite rule for the domain.
+          3) update configuaration file in/etc/httpd/conf.d
+      
+        
