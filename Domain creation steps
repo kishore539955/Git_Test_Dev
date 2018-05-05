@@ -33,5 +33,5 @@
           1) update/create virtual_hosts.conf in /etc/httpd/conf to allow the orgin to access control.
           2) Create a new rewrite rule for the domain.
           3) update configuaration file in/etc/httpd/conf.d
-      
+      5) Create a application in appserver.
         
